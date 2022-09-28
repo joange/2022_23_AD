@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NuevoCurso>
+    <Modulnou>
+        <Nomnou>Accés a Dades</Nomnou>
+        <Horesnou>6</Horesnou>
+        <Qualificacionou>8.45</Qualificacionou>
+    </Modulnou>
+    <Modulnou>
+        <Nomnou>Programació de serveis i processos</Nomnou>
+        <Horesnou>3</Horesnou>
+        <Qualificacionou>9.0</Qualificacionou>
+    </Modulnou>
+    <Modulnou>
+        <Nomnou>Desenvolupament d'interfícies</Nomnou>
+        <Horesnou>6</Horesnou>
+        <Qualificacionou>8.0</Qualificacionou>
+    </Modulnou>
+    <Modulnou>
+        <Nomnou>Programació Multimèdia i dispositiud mòbils</Nomnou>
+        <Horesnou>5</Horesnou>
+        <Qualificacionou>7.34</Qualificacionou>
+    </Modulnou>
+    <Modulnou>
+        <Nomnou>Sistemes de Gestió Empresarial</Nomnou>
+        <Horesnou>5</Horesnou>
+        <Qualificacionou>8.2</Qualificacionou>
+    </Modulnou>
+    <Modulnou>
+        <Nomnou>Empresa i iniciativa emprenedora</Nomnou>
+        <Horesnou>3</Horesnou>
+        <Qualificacionou>7.4</Qualificacionou>
+    </Modulnou>
+</NuevoCurso>

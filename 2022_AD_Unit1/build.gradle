@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+ mainClassName = 'Sample6.Moduls2'
+// mainClassName = 'XMLLib.XMLLib'
+// mainClassName = 'JAXB.CreateXML'
+//mainClassName = 'JSONLIB.Sample'
+// mainClassName = 'Sample1.NewClass'
+
+
+run {
+    args = ["hola"]
+}
+
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+    testImplementation    'junit:junit:4.13'
+
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+    
+    // https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+    implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+    implementation group: 'javax.activation', name: 'activation', version: '1.1'    
+    implementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '2.3.1'
+
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20220320'
+
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation 'com.google.code.gson:gson:2.9.1'
+}
+

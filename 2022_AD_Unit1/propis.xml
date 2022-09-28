@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Sample XML Props</comment>
+<entry key="Status">functional</entry>
+<entry key="Size">Big</entry>
+<entry key="Color">Green</entry>
+<entry key="Visible">false</entry>
+<entry key="Value">345.24</entry>
+<entry key="Range">123</entry>
+</properties>
