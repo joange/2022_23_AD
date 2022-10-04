@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+mainClassName = 'TestJson.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation     'junit:junit:4.13'
+
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation 'org.json:json:20220320'
+
+
+}

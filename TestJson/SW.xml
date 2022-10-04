@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Personatges>
+    <character films="4" vehicles="2"/>
+    <character films="6" vehicles="0"/>
+    <character films="6" vehicles="0"/>
+    <character films="4" vehicles="0"/>
+    <character films="4" vehicles="1"/>
+    <character films="3" vehicles="0"/>
+    <character films="3" vehicles="0"/>
+    <character films="1" vehicles="0"/>
+    <character films="1" vehicles="0"/>
+    <character films="6" vehicles="1"/>
+    <character films="3" vehicles="2"/>
+    <character films="2" vehicles="0"/>
+    <character films="4" vehicles="1"/>
+    <character films="3" vehicles="0"/>
+    <character films="1" vehicles="0"/>
+    <character films="3" vehicles="0"/>
+    <character films="3" vehicles="1"/>
+    <character films="1" vehicles="0"/>
+    <character films="5" vehicles="0"/>
+    <character films="5" vehicles="0"/>
+</Personatges>
