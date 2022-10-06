@@ -1,5 +1,6 @@
  {
-     "personatges":[
+     "personatges":
+             [
     {
         "name": "Luke Skywalker",
         "height": "172",
