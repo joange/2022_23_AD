@@ -114,9 +114,9 @@ public class Sample {
         
         Sample sam=new Sample();
         
-        sam.showCSV(filename, true, ",");
+       // sam.showCSV(filename, true, ",");
         
-       // sam.showCSVCols(filename, false, ",");
+       sam.showCSVCols(filename, true, ",");
         
     }
 }
