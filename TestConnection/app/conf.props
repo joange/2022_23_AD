@@ -1,0 +1,8 @@
+#My configuration file
+#Fri Oct 14 11:29:46 CEST 2022
+password=root
+userUnicode=true
+characterEncoding=UTF-8
+user=root
+server=localhost
+port=3308
