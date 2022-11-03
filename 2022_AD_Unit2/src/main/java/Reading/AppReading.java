@@ -37,7 +37,7 @@ public class AppReading {
 
             // processing
             while (rst.next()) {
-                System.out.print(ConsoleColors.BLUE_BRIGHT + "Person: " + ConsoleColors.RESET);
+                System.out.print(ConsoleColors.BLUE_BRIGHT + "Person ("+ rst.getInt(1)+ "): " + ConsoleColors.RESET);
                 /*
                 System.out.println(
                         rst.getString(3)+ ", "+
@@ -94,7 +94,7 @@ public class AppReading {
 
             Connection con = conDB.getConnexio();
 
-            String ID = Utilitats.leerTextoC("Give me an id: ");
+            int ID = Utilitats.leerEnteroC("Give me an id: ");
             // The query
             String SQL = "Select * from Persona where idPersona =" + ID;
             // The statement
@@ -123,14 +123,16 @@ public class AppReading {
 
             Connection con = conDB.getConnexio();
 
-            String ID = Utilitats.leerTextoC("Give me an id: ");
+            int ID = Utilitats.leerEnteroG("Give me an id: ");
             // The query
             String SQL = "Select * from Persona where idPersona = ?";
             // The statement
             PreparedStatement pst = con.prepareStatement(SQL);
             // fill placeholders
 
-            pst.setString(1, ID);
+            pst.setInt(1, ID);
+            
+            System.out.println(pst);
 
             // The execution
             ResultSet rst = pst.executeQuery();
@@ -138,6 +140,48 @@ public class AppReading {
             // processing
             while (rst.next()) {
                 System.out.print(ConsoleColors.BLUE_BRIGHT + "People with " + ID + ": " + ConsoleColors.RESET);
+                System.out.println(
+                        rst.getString("apellidos") + ", "
+                        + rst.getString("nombre") + " "
+                        + rst.getInt("edad"));
+            }
+
+            rst.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+    
+       private void prepared3() {
+        try {
+            ConnexioDB conDB = new ConnexioDB("Instituto");
+
+            Connection con = conDB.getConnexio();
+
+            int mEdat=Utilitats.leerEnteroC("Dime edad minima: ");
+            int MEdat=Utilitats.leerEnteroC("Dime edad maxima: ");
+            int longitud=Utilitats.leerEnteroG("Dime tamaño máximo: ");
+            
+            // The query
+            String SQL = "select * from Persona\n" +
+                        "where edad between ? and ? and\n" +
+                        "length(nombre)<?";
+            // The statement
+            PreparedStatement pst = con.prepareStatement(SQL);
+            // fill placeholders
+
+            pst.setInt(1, mEdat);
+            pst.setInt(2, MEdat);
+            pst.setInt(3, longitud);
+            
+            System.out.println(pst);
+
+            // The execution
+            ResultSet rst = pst.executeQuery();
+
+            // processing
+            while (rst.next()) {
                 System.out.println(
                         rst.getString("apellidos") + ", "
                         + rst.getString("nombre") + " "
@@ -167,6 +211,7 @@ public class AppReading {
             // fill placeholders
 
             pst.setString(1, "%" + name + "%");
+            //pst.setString(1, name );
             pst.setInt(2, age);
 
             System.out.println(pst.toString());
@@ -191,11 +236,13 @@ public class AppReading {
 
     public static void main(String[] args) {
         AppReading app = new AppReading();
-
-        // app.fixed();
-        // app.variable();
-        // app.injection();
+        
+        //app.fixed();
+        //app.variable();
+        //app.injection();
         // app.prepared();
-        app.prepared2();
+        // app.prepared2();
+        
+        app.prepared3();
     }
 }

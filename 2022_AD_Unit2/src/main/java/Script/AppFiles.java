@@ -22,6 +22,10 @@ public class AppFiles {
 
     public static void main(String[] args) throws IOException {
 
+        String algo="<"+System.getProperty("line.separator")+">";
+        System.out.print(algo);
+        System.out.println(algo.length());
+        /*
         try {
             ConnexioDB conDB = new ConnexioDB("Instituto");
 
@@ -37,5 +41,7 @@ public class AppFiles {
         } catch (SQLException ex) {
             Logger.getLogger(AppFiles.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+*/
     }
 }

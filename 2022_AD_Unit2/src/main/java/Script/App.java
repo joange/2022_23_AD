@@ -45,6 +45,7 @@ public class App {
             }
 
             String query = sb.toString();   // generemos el Script en un String
+            System.out.println(query);
             Statement stm = con.createStatement();
             int result = stm.executeUpdate(query);
             System.out.println("Script ejecutado con salida " + result);

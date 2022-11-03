@@ -31,7 +31,7 @@ public class App {
             
             int affectedRows=st.executeUpdate(SQL);
             
-            System.out.println(affectedRows+ "row has been inserted");
+            System.out.println(affectedRows+ " row has been inserted");
                     
            } catch (SQLException ex) {
             Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
